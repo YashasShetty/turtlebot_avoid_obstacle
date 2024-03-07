@@ -37,7 +37,7 @@ bool Turtlebot3Drive::init()
   // initialize subscribers
   laser_scan_sub_  = nh_.subscribe("scan", 10, &Turtlebot3Drive::laserScanMsgCallBack, this);
   odom_sub_ = nh_.subscribe("odom", 10, &Turtlebot3Drive::odomMsgCallBack, this);
-
+  ROS_DEBUG_STREAM( " Counted ␣ t o ␣ " << laser_scan_sub_ ) ;
   return true;
 }
 
