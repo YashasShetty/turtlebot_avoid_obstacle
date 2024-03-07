@@ -63,6 +63,7 @@ void Turtlebot3Drive::laserScanMsgCallBack(const sensor_msgs::LaserScan::ConstPt
     {
       scan_data_[num] = msg->ranges.at(scan_angle[num]);
     }
+    ROS_INFO_STREAM( " Laser"<<num<<" output " << scan_data_[num] );
   }
 }
 
